@@ -1,0 +1,171 @@
+/* Fonts loaded when the computer is connected to the internet. */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap');
+
+/* Aaliyah's EUTHENICS 2 portfolio — purple background theme */
+
+/* General settings */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Poppins", Arial, sans-serif;
+    /* The sticker design is stored inside assets so it works offline. */
+    background-color: #180c26;
+    background-image:
+        linear-gradient(rgba(14, 4, 30, 0.22), rgba(14, 4, 30, 0.32)),
+        url("assets/sticker-tech-background.png");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #f8f2ff;
+    line-height: 1.6;
+}
+.container { width: 90%; max-width: 900px; margin: auto; }
+
+/* Content remains readable while the sticker design shows through. */
+header, main, footer { position: relative; }
+
+/* Tech-style font for headings; simpler font for paragraphs. */
+header h1, .welcome h2, .content-section h2, .work-item h3 {
+    font-family: "Orbitron", Arial, sans-serif;
+    letter-spacing: 0.3px;
+}
+
+.welcome h2, .content-section h2 {
+    text-shadow: 0 0 12px rgba(193, 100, 250, 0.34);
+}
+
+
+/* Navigation */
+header {
+    background-color: rgba(21, 9, 37, 0.92);
+    border-bottom: 2px solid #9c57ca;
+    padding: 18px 0;
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+header h1 { font-size: 20px; margin: 0; color: #fff; }
+nav { display: flex; gap: 18px; flex-wrap: wrap; }
+nav a { color: #f1d9ff; text-decoration: none; font-size: 14px; }
+nav a:hover, a:hover { text-decoration: underline; }
+
+/* Welcome area */
+.welcome {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 55px 0 35px;
+    text-shadow: 0 1px 3px #150922;
+}
+.profile-circle {
+    width: 140px;
+    height: 140px;
+    min-width: 140px;
+    border-radius: 50%;
+    border: 4px solid #ead1ff;
+    object-fit: cover;
+    background-color: #eedbf7;
+}
+.small-title { color: #e8c0ff; font-weight: bold; margin-bottom: 5px; }
+.welcome h2 { font-size: 27px; color: #fff; margin: 0 0 12px; }
+.welcome p { margin-top: 0; }
+.button {
+    display: inline-block;
+    background-color: #9d54c9;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    margin-top: 6px;
+    text-shadow: none;
+}
+.button:hover { background-color: #7d39a8; text-decoration: none; }
+
+/* Main content boxes */
+.content-section {
+    background-color: rgba(21, 9, 37, 0.82);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(194, 112, 239, 0.60);
+    border-radius: 8px;
+    padding: 26px;
+    margin-bottom: 22px;
+}
+.content-section h2 {
+    font-size: 21px;
+    color: #f0cfff;
+    margin: 0 0 12px;
+    border-bottom: 2px solid #794a9a;
+    padding-bottom: 8px;
+}
+.content-section p { margin-top: 10px; }
+.skills-list { padding-left: 23px; }
+.skills-list li { margin-bottom: 7px; }
+
+/* Academic project boxes */
+.work-item {
+    background-color: rgba(65, 30, 84, 0.72);
+    border-left: 4px solid #d17bff;
+    padding: 14px 18px;
+    margin-top: 15px;
+}
+.work-item h3 { font-size: 16px; margin: 0 0 6px; color: #f1ceff; }
+.work-item p { margin: 0; }
+.work-item p + p { margin-top: 10px; }
+.project-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 14px;
+    border: 1px solid #b48acb;
+    border-radius: 5px;
+}
+.small-heading { color: #f1ceff; margin-top: 28px; }
+
+/* Links and footer */
+a { color: #e5b3ff; }
+footer {
+    background-color: rgba(21, 9, 37, 0.92);
+    border-top: 1px solid #794a9a;
+    text-align: center;
+    padding: 15px;
+    margin-top: 35px;
+    font-size: 13px;
+    color: #f1d9ff;
+}
+
+/* Small screens */
+@media (max-width: 650px) {
+    body { background-attachment: scroll; background-position: center top; }
+    .header-content, .welcome { flex-direction: column; align-items: flex-start; }
+    .welcome { padding-top: 35px; gap: 15px; }
+    .profile-circle { width: 110px; height: 110px; min-width: 110px; }
+    .welcome h2 { font-size: 24px; }
+    .content-section { padding: 20px; }
+}
+
+/* On smaller screens, let long headings wrap neatly. */
+@media (max-width: 650px) {
+    header h1 { font-size: 18px; }
+    .welcome h2 { font-size: 22px; }
+    .content-section h2 { font-size: 19px; }
+}
+
+/* Small decorative sticker accents on the cards. */
+.content-section { position: relative; }
+.content-section::after {
+    content: "✦";
+    position: absolute;
+    right: 16px;
+    top: 11px;
+    color: #dca4ff;
+    font-size: 19px;
+    opacity: 0.75;
+    pointer-events: none;
+}
