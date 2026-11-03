@@ -169,3 +169,42 @@ footer {
     opacity: 0.75;
     pointer-events: none;
 }
+
+/* Resume sections: experience, education, skills, and contact */
+.item-date {
+    color: #e3b6ff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+.item-subtitle {
+    color: #e8d6f3;
+    font-weight: 500;
+}
+.work-item ul { padding-left: 22px; margin: 12px 0 0; }
+.work-item li { margin-bottom: 7px; }
+.skill-groups {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+    margin-top: 18px;
+}
+.skill-group {
+    background-color: rgba(65, 30, 84, 0.72);
+    border: 1px solid rgba(204, 132, 249, 0.35);
+    border-radius: 7px;
+    padding: 14px 16px;
+}
+.skill-group h3 {
+    margin: 0 0 7px;
+    color: #f1ceff;
+    font-size: 15px;
+}
+.skill-group p { margin: 0; }
+.contact-lines a { overflow-wrap: anywhere; }
+nav a:focus-visible, a:focus-visible { outline: 2px solid #f3d5ff; outline-offset: 4px; }
+@media (max-width: 650px) {
+    .skill-groups { grid-template-columns: 1fr; }
+    nav { gap: 10px 15px; }
+    nav a { font-size: 13px; }
+}
